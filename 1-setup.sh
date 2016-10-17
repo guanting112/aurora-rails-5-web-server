@@ -14,7 +14,7 @@ function all_done()      { local note="done";      awk '{ print "\033[1;5;32m[",
 #
 function show_banner()
 {
-  printf "\n\e[1;36mAurora Rails 4 Web Server (by Guanting Chen)\e[m\n"
+  printf "\n\e[1;36mAurora Rails 5 Web Server (by Guanting Chen)\e[m\n"
   printf "\e[36m<4dev/> $(whoami)@$(hostname) $(date); Script Loaded.\e[m\n\n"
 }
 
