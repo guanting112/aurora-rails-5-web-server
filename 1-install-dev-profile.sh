@@ -9,11 +9,11 @@ function load_toolkit_setting()
 #
 # Bash Helper
 #
-function shell_message() { local note="$1";         awk '{ print "\033[37m[","'$note'","]","=>",$0,"\033[m" }'; }
-function shell_log()     { local note="script/run"; awk '{ print "\033[1;33;44m[","'$note'","]","=>",$0,"\033[m" }'; }
-function shell_error()   { local note="error";      awk '{ print "\033[1;5;33;41m[","'$note'","]","=>",$0,"\033[m" }'; }
-function important()     { local note="important";  awk '{ print "\033[1;31m[","'$note'","]","=>",$0,"\033[m" }'; }
-function all_done()      { local note="done";       awk '{ print "\033[1;5;32m[","'$note'","]","=>",$0,"\033[m" }'; }
+function shell_message() { local note="$1"; awk '{ print "\033[37m[","'$note'","]","=>",$0,"\033[m" }'; }
+function shell_log() { local note="script/run"; awk '{ print "\033[1;33;44m[","'$note'","]","=>",$0,"\033[m" }'; }
+function shell_error() { local note="error"; awk '{ print "\033[1;5;33;41m[","'$note'","]","=>",$0,"\033[m" }'; }
+function important() { local note="important"; awk '{ print "\033[1;31m[","'$note'","]","=>",$0,"\033[m" }'; }
+function all_done() { local note="done"; awk '{ print "\033[1;5;32m[","'$note'","]","=>",$0,"\033[m" }'; }
 
 function tips()
 {
