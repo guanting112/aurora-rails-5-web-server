@@ -5,7 +5,7 @@
 
 * Version: 0.5.0 ( 20161017 )
 
-![](http://i.imgur.com/ZXxAd3x.jpg)
+![](http://i.imgur.com/smnypIe.jpg)
 
 # 系統要求
 
@@ -87,9 +87,9 @@ cat /home/apps/.stickie
 
 # 等待執行完畢，若出現以下畫面，表示完成安裝
 
-![](http://i.imgur.com/TcYgSBp.png)
+![](http://i.imgur.com/JAvdys7.jpg)
 
-1. 腳本有測試到資料庫連線，您在上述圖中看到 test connection ok 的訊息，表示 MySQL 連線是正常的
+1. 腳本有測試到資料庫連線，您在上述圖中看到 test connection ok 的訊息，表示 SQL 資料庫連線是正常的
 2. 伺服器安裝完畢後，您可以試著「重開伺服器」 或「重新登入」來確定環境是否載入成功
 3. 您在此階段可以開始建立你的 Rails 的專案建立 或 Capistrano 的設定
 4. 輸入 tips 指令來查看有什麼新指令可以使用
