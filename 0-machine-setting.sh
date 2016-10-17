@@ -4,13 +4,13 @@ load_setting()
 {
 
   # This script version
-  SCRIPT_VERSION="0.1.2-20160302"
+  SCRIPT_VERSION="0.5.0-20161017"
 
   # Host new SSH Port
   HOST_NEW_SSH_PORT="56888"
 
-  # Host Name (ex: AR-150305-1234)
-  HOST_NODE_NAME_PREFIX="AR"
+  # Host Name (ex: AR5-150305-1234)
+  HOST_NODE_NAME_PREFIX="AR5"
 
   # Deploy Account
   DEPLOY_USER_NAME="apps"
