@@ -1,28 +1,28 @@
 
-# Aurora Rails 4 Web Server
-# 極光 Rails 4 專屬伺服器 安裝包
+# Aurora Rails 5 Web Server
+# 極光 Rails 5 專屬伺服器 安裝包
 
-* Version: 0.1.2 ( 20160302 )
+* Version: 0.5.0 ( 20161017 )
 
-![](http://i.imgur.com/z5hHzfq.png)
+![](Image Url)
 
 # 系統要求
 
-* SSD VPS
 * Ubuntu 14.04 作業系統
 * 需要有 root 的權限的帳號，並且可以使用 sh 或 bash
+* (選項) SSD VPS
 
 # 安裝項目
 
-* 系統更新、必要設定、必備套件、node-js、Image Magick 等
-* 建立一組給應用程式用的部署帳號 ( 預設 apps )
+* 系統更新、必要設定、必備套件、node-js、Image Magick
+* 建立一組給應用程式用的部署帳號 / 預設名為 apps
 * 建立 Git Repo Deployment Key 與 建立無需密碼即可登入的機制
-* Ruby 2.3.1 程式環境 ( with rbenv )
-* Rails 4.x Web Framework 與 rest-client、mailgun、backup、whenever 套件組
-* Nginx Extras 與 Passenger 伺服器
-* 安裝 MariaDB 5 資料庫系統 ( 經過大量的上線環境運作後，認定是最穩定的分支 )
-* 基本的 SSH 安全設定 ( 不含 iptabls 防火牆設定 )
-* 安裝輔助工具在部署帳號上
+* Ruby 2.3.1 程式環境 / with rbenv
+* Rails 5 Web Framework 與 rest-client、mailgun、backup、whenever 套件組
+* Nginx Extras 與 Passenger Server
+* 安裝 MariaDB 5.x 資料庫系統
+* 基本的 SSH 安全設定，但不含 iptable 或 ufw 防火牆設定，請自行設定
+* 安裝輔助工具在部署帳號環境上
 
 # 注意事項
 
@@ -48,6 +48,10 @@ git clone https://github.com/guanting112/aurora-rails-5-web-server.git --branch 
 # 0-machine-setting.sh 是整套腳本的基本設定，可以讓你設定 git repo、ssh key、ssh port、部署帳號的名稱、密碼等等
 # 您可以修改它 或 自行上傳一份自行製作的版本來複寫掉這個檔案
 cat /tmp/aurora-rails-5-web-server/0-machine-setting.sh
+
+# or
+
+vi /tmp/aurora-rails-5-web-server/0-machine-setting.sh
 
 # 當準備上述指令執行完成後，你需要執行以下片段，進行為安裝環境初始化
 . /tmp/aurora-rails-5-web-server/0-init-deploy.sh
@@ -79,14 +83,14 @@ ssh apps@10.10.10.101 -i PRIVATE_KEY
 # 該檔案記錄 您的帳號密碼相關資料，安裝完成後，日後不需要可以刪除
 cat /home/apps/.stickie
 
-# 執行 Aurora Rails 4 System Environment 主腳本
+# 執行 Aurora Rails 5 System Environment 主腳本
 . ~/aurora-rails-5-web-server/1-setup.sh
 
 ```
 
 # 等待腳本執行完畢，若出現以下畫面，則表示成功完成安裝
 
-![](http://i.imgur.com/TcYgSBp.png)
+![](__)
 
 1. 腳本有測試到資料庫連線，您在上述圖中看到 test connection ok 的訊息，表示 MySQL 連線是正常的
 2. 伺服器安裝完畢後，您可以試著「重開伺服器」 或「重新登入」來確定環境是否載入成功
