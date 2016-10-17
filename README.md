@@ -4,7 +4,7 @@
 
 * Version: 0.5.0 ( 20161017 )
 
-![](Image Url)
+![](http://i.imgur.com/ZXxAd3x.jpg)
 
 # 系統要求
 
