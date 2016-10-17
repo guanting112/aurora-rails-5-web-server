@@ -1,6 +1,7 @@
 
 # Aurora Rails 5 Web Server
 # 極光 Rails 5 專屬伺服器 安裝包
+----
 
 * Version: 0.5.0 ( 20161017 )
 
@@ -10,7 +11,6 @@
 
 * Ubuntu 14.04 作業系統
 * 需要有 root 的權限的帳號，並且可以使用 sh 或 bash
-* (選項) SSD VPS
 
 # 安裝項目
 
@@ -18,10 +18,11 @@
 * 建立一組給應用程式用的部署帳號 / 預設名為 apps
 * 建立 Git Repo Deployment Key 與 建立無需密碼即可登入的機制
 * Ruby 2.3.1 程式環境 / with rbenv
-* Rails 5 Web Framework 與 rest-client、mailgun、backup、whenever 套件組
-* Nginx Extras 與 Passenger Server
-* 安裝 MariaDB 5.x 資料庫系統
-* 基本的 SSH 安全設定，但不含 iptable 或 ufw 防火牆設定，請自行設定
+* Ruby on Rails 5.0.x
+* Gems: rest-client、mailgun、backup、whenever
+* Nginx Extras 與 Phusion Passenger 5
+* MariaDB 5.x Database
+* 基本 SSH 設定，但不含 iptable 或 ufw 防火牆設定
 * 安裝輔助工具在部署帳號環境上
 
 # 注意事項
@@ -47,10 +48,6 @@ git clone https://github.com/guanting112/aurora-rails-5-web-server.git --branch 
 
 # 0-machine-setting.sh 是整套腳本的基本設定，可以讓你設定 git repo、ssh key、ssh port、部署帳號的名稱、密碼等等
 # 您可以修改它 或 自行上傳一份自行製作的版本來複寫掉這個檔案
-cat /tmp/aurora-rails-5-web-server/0-machine-setting.sh
-
-# or
-
 vi /tmp/aurora-rails-5-web-server/0-machine-setting.sh
 
 # 當準備上述指令執行完成後，你需要執行以下片段，進行為安裝環境初始化
@@ -88,9 +85,9 @@ cat /home/apps/.stickie
 
 ```
 
-# 等待腳本執行完畢，若出現以下畫面，則表示成功完成安裝
+# 等待執行完畢，若出現以下畫面，表示完成安裝
 
-![](__)
+![](http://i.imgur.com/TcYgSBp.png)
 
 1. 腳本有測試到資料庫連線，您在上述圖中看到 test connection ok 的訊息，表示 MySQL 連線是正常的
 2. 伺服器安裝完畢後，您可以試著「重開伺服器」 或「重新登入」來確定環境是否載入成功
@@ -103,9 +100,9 @@ tips
 
 # 其他
 
-# LICENSE
+# Rails 5 Action Cable 安裝參考
 
-本專案原始碼皆採 GNU GENERAL PUBLIC LICENSE 授權 ( 詳見 LICENSE 檔案 )
+https://www.phusionpassenger.com/library/config/nginx/action_cable_integration
 
 ## 安裝完成後的輔助指令
 
@@ -148,3 +145,8 @@ curl -I "http://news.example.com/pages/home"
 # 會得到一個 HTTP 400 (Bad Request)
 curl -I "http://伺服器IP/pages/home"
 ```
+
+
+# LICENSE
+
+本專案原始碼皆採 GNU GENERAL PUBLIC LICENSE 授權 ( 詳見 LICENSE 檔案 )
