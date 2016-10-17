@@ -79,7 +79,7 @@ function install_other_packages() {
 function setup_software_from_shell()
 {
   local shell_file_name=$1
-  local shell_file_path=~/aurora-rails-4-web-server/$shell_file_name
+  local shell_file_path=~/aurora-rails-5-web-server/$shell_file_name
 
   echo 'Update sudo validate' | important
 
@@ -118,7 +118,7 @@ function start_setup_dev_profile()
 {
   echo "Setup Dev Profile" | shell_log
 
-  cp ~/aurora-rails-4-web-server/1-install-dev-profile.sh ~/.dev_profile
+  cp ~/aurora-rails-5-web-server/1-install-dev-profile.sh ~/.dev_profile
   echo 'source "$HOME/.dev_profile"' >> ~/.bash_profile && source ~/.bash_profile
   echo -e ':set number\n:syntax on' > ~/.vimrc 
 }

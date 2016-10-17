@@ -41,21 +41,21 @@
 ```sh
 
 # 需要透過 git 複製腳本資料下來到新機器上
-rm -rfv /tmp/aurora-rails-4-web-server
+rm -rfv /tmp/aurora-rails-5-web-server
 sudo apt-get install -y git
-git clone https://github.com/guanting112/aurora-rails-4-web-server.git --branch master --single-branch /tmp/aurora-rails-4-web-server
+git clone https://github.com/guanting112/aurora-rails-5-web-server.git --branch master --single-branch /tmp/aurora-rails-5-web-server
 
 # 0-machine-setting.sh 是整套腳本的基本設定，可以讓你設定 git repo、ssh key、ssh port、部署帳號的名稱、密碼等等
 # 您可以修改它 或 自行上傳一份自行製作的版本來複寫掉這個檔案
-cat /tmp/aurora-rails-4-web-server/0-machine-setting.sh
+cat /tmp/aurora-rails-5-web-server/0-machine-setting.sh
 
 # 當準備上述指令執行完成後，你需要執行以下片段，進行為安裝環境初始化
-. /tmp/aurora-rails-4-web-server/0-init-deploy.sh
+. /tmp/aurora-rails-5-web-server/0-init-deploy.sh
 
 # 部署帳號預設名稱為 apps，這組帳號將會成為您日後部署 rails 時專用的 user
 
-# 完整的腳本資料會放在 aurora-rails-4-web-server 目錄下
-ls /home/apps/aurora-rails-4-web-server
+# 完整的腳本資料會放在 aurora-rails-5-web-server 目錄下
+ls /home/apps/aurora-rails-5-web-server
 
 # 當執行完畢後，你會在畫面上看到網站程式專用的部署帳號的密碼
 # 看不到也可以用 .stickie 來顯示
@@ -80,7 +80,7 @@ ssh apps@10.10.10.101 -i PRIVATE_KEY
 cat /home/apps/.stickie
 
 # 執行 Aurora Rails 4 System Environment 主腳本
-. ~/aurora-rails-4-web-server/1-setup.sh
+. ~/aurora-rails-5-web-server/1-setup.sh
 
 ```
 

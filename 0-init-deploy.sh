@@ -2,18 +2,18 @@
 
 load_setting_file()
 {
-  . /tmp/aurora-rails-4-web-server/0-machine-setting.sh
-  rm /tmp/aurora-rails-4-web-server/0-machine-setting.sh  
+  . /tmp/aurora-rails-5-web-server/0-machine-setting.sh
+  rm /tmp/aurora-rails-5-web-server/0-machine-setting.sh  
 }
 
 copy_setup_scripts()
 {
-  sudo cp -R /tmp/aurora-rails-4-web-server/ /home/$DEPLOY_USER_NAME/aurora-rails-4-web-server
-  sudo rm -rfv /tmp/aurora-rails-4-web-server/ > /dev/null
-  sudo rm -rfv /home/$DEPLOY_USER_NAME/aurora-rails-4-web-server/0-machine-setting.sh > /dev/null
-  sudo rm -rfv /home/$DEPLOY_USER_NAME/aurora-rails-4-web-server/0-init-deploy.sh > /dev/null
-  sudo chown $DEPLOY_USER_NAME:$DEPLOY_USER_NAME /home/$DEPLOY_USER_NAME/aurora-rails-4-web-server/*
-  sudo chmod +x /home/$DEPLOY_USER_NAME/aurora-rails-4-web-server/1-setup.sh
+  sudo cp -R /tmp/aurora-rails-5-web-server/ /home/$DEPLOY_USER_NAME/aurora-rails-5-web-server
+  sudo rm -rfv /tmp/aurora-rails-5-web-server/ > /dev/null
+  sudo rm -rfv /home/$DEPLOY_USER_NAME/aurora-rails-5-web-server/0-machine-setting.sh > /dev/null
+  sudo rm -rfv /home/$DEPLOY_USER_NAME/aurora-rails-5-web-server/0-init-deploy.sh > /dev/null
+  sudo chown $DEPLOY_USER_NAME:$DEPLOY_USER_NAME /home/$DEPLOY_USER_NAME/aurora-rails-5-web-server/*
+  sudo chmod +x /home/$DEPLOY_USER_NAME/aurora-rails-5-web-server/1-setup.sh
 }
 
 run_node_boot_script()
