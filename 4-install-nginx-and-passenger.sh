@@ -96,7 +96,7 @@ function create_nginx_server_conf()
 {
   printf '%s' '
 user www-data;
-worker_processes 4;
+worker_processes 2;
 pid /run/nginx.pid;
 
 events {
