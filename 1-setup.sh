@@ -101,11 +101,6 @@ function setup_software_from_shell()
     exit
   fi
 
-  echo "Clear history" | important
-
-  echo "Remove shell script" | important
-  rm -rfv $shell_file_path | shell_message rm
-
   history -c
 }
 
