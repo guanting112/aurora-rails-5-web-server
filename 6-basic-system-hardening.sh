@@ -25,8 +25,18 @@ function reload_sshd()
   sudo reload ssh
 }
 
+function add_reboot_not_use_sudo_to_apps_user()
+{
+  printf '%s' '
+[DEPLOY_USER_NAME] ALL=NOPASSWD:/sbin/reboot
+' | sudo tee /etc/sudoers.d/$DEPLOY_USER_NAME > /dev/null
+
+  sudo sed -r "s:\[DEPLOY_USER_NAME\]:$DEPLOY_USER_NAME:g" /etc/sudoers.d/$DEPLOY_USER_NAME
+}
+
 function run_script_system_hardening()
 {
+  add_reboot_not_use_sudo_to_apps_user
   load_setting
   fix_sshd_config
   reload_sshd
