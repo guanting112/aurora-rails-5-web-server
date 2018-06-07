@@ -32,7 +32,7 @@ function setup_base()
   sudo apt-get install -y nodejs | shell_message "apt-get/nodejs"
 
   echo "Setting Host Name Server" | shell_log
-  echo -e "nameserver 8.8.4.4\nnameserver 208.67.220.220" | sudo tee /etc/resolv.conf > /dev/null
+  echo -e "nameserver 1.1.1.1\nnameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null
 }
 
 function setup_swap()
