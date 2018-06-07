@@ -143,6 +143,8 @@ character-set-server = utf8
 
   printf '%s' "
 [mysqld]
+innodb_file_per_table = 1
+innodb_lock_wait_timeout = 120
 innodb_buffer_pool_size = 256M
 innodb_io_capacit = 800
 innodb_log_buffer_size = 24M
