@@ -108,8 +108,11 @@ SQL_BACKUP_PASSWORD=$SQL_BACKUP_PASSWORD
 " | sudo tee /home/$DEPLOY_USER_NAME/.stickie > /dev/null
 
   sudo chown -R $DEPLOY_USER_NAME:$DEPLOY_USER_NAME /home/$DEPLOY_USER_NAME/.stickie
+  sudo chmod 0400 /home/$DEPLOY_USER_NAME/.stickie
 
-  echo "System: $DEPLOY_USER_NAME:$DEPLOY_USER_PASSWORD"
+  echo "New User Account ( for Application ) "
+  echo "new username: $DEPLOY_USER_NAME"
+  echo "new password: $DEPLOY_USER_PASSWORD"
 }
 
 unset_variable()
