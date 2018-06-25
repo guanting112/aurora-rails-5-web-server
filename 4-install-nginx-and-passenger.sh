@@ -112,7 +112,7 @@ http {
 
   more_clear_headers "Server";
   more_clear_headers "X-Powered-By";
-  more_set_headers "Server: Aurora";
+  # more_set_headers "Server: Aurora";
 
   sendfile on;
   tcp_nopush on;
@@ -131,8 +131,8 @@ http {
   # Logging Settings
   ##
 
-  access_log /var/log/nginx/access.log;
-  error_log /var/log/nginx/error.log;
+  access_log /var/log/nginx/access.log combined buffer=512k;
+  error_log /var/log/nginx/error.log crit;
 
   ##
   # Gzip Settings
